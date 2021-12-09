@@ -10,4 +10,21 @@ const app = new Vue({
   el: '#root',
   data: {},
   methods: {},
+  created() {
+    for (let i = 0; i < 10; i++) {
+      let emails = {
+        mail: null,
+      };
+      axios
+        .get('https://flynn.boolean.careers/exercises/api/random/mail')
+        .then((risposta) => {
+          emails.mail = risposta.data.response;
+          console.log(risposta.data.response);
+        })
+        .catch(function (error) {
+          // handle error
+          console.log(error);
+        });
+    }
+  },
 });
