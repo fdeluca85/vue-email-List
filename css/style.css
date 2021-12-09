@@ -10,4 +10,15 @@
 body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
+  margin: 20px;
+}
+h1 {
+  margin-left: 50px;
+  text-transform: uppercase;
+}
+ul {
+  list-style: square;
+  line-height: 2;
+  margin-top: 20px;
+  margin-left: 70px;
 }
