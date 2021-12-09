@@ -9,7 +9,7 @@
 const app = new Vue({
   el: '#root',
   data: {
-    mailLists: [],
+    listaIndirizzi: [],
   },
   methods: {},
   created() {
@@ -22,7 +22,7 @@ const app = new Vue({
         .then((risposta) => {
           emails.mail = risposta.data.response;
           console.log(risposta.data.response);
-          this.mailLists.push(emails);
+          this.listaIndirizzi.push(emails);
         })
         .catch(function (error) {
           // handle error

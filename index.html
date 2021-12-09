@@ -12,8 +12,10 @@
 
 <body>
     <div id="root">
-        <ul v-for="(email, index) in mailLists ">
-            <li>{{email.mail}}</li>
+
+        <h1>Lista indirizzi email autorizzati:</h1>
+        <ul v-if="listaIndirizzi.length == 10">
+            <li v-for="(email, index) in listaIndirizzi">{{email.mail}}</li>
         </ul>
 
 
