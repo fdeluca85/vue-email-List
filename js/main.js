@@ -8,7 +8,9 @@
 
 const app = new Vue({
   el: '#root',
-  data: {},
+  data: {
+    mailLists: [],
+  },
   methods: {},
   created() {
     for (let i = 0; i < 10; i++) {
@@ -20,6 +22,7 @@ const app = new Vue({
         .then((risposta) => {
           emails.mail = risposta.data.response;
           console.log(risposta.data.response);
+          this.mailLists.push(emails);
         })
         .catch(function (error) {
           // handle error
